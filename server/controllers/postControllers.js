@@ -26,7 +26,7 @@ const getPost = async (req, res, next) => {
 // GET POSTS BY CATEGORY    
 // GET: api/posts/categories/:category
 // UNPROTECTED
-const getCatPost = async (req, res, next) => {
+const getCatPosts = async (req, res, next) => {
     res.json("Get Post By Category")
 }
 
@@ -51,5 +51,10 @@ const editPost = async (req, res, next) => {
 // DELETE: api/posts/:id
 // PROTECTED
 const deletePost = async (req, res, next) => {
-    res.json("Edit Post")
+    res.json("Delete Post")
 }
+
+
+
+
+module.exports = {createPost, getPosts, getPost, getCatPosts, getUserPosts, editPost, deletePost }
