@@ -74,7 +74,7 @@ const loginUser = async (req,res,next) => {
         const token = jwt.sign({id, name}, process.env.JWT_SECRET, {expiresIn: "1d"})
 
         res.status(200).json({token, id, name})
-        res.json(`Welcome Back ${user.name}`)
+        // res.json(`Welcome Back ${user.name}`)
     } catch (error) {
         return  next(new HttpError("User Login Failed. Please Check Your Credentials", 422))
     }
