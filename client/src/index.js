@@ -17,10 +17,11 @@ import CategoryPosts from './pages/CategoryPost'
 import AuthorPost from './pages/AuthorPost'
 import Dashboard from './pages/Dashboard'
 import Logout from './pages/Logout'
+import UserProvider from './context/userContext';
 const router = createBrowserRouter ([
   {
     path: "/",
-    element: <Layout/>,
+    element: <UserProvider><Layout/></UserProvider>,
     errorElement: <ErrorPage/>,
     children: [
       {index: true, element: <Home/>},
